@@ -32,10 +32,3 @@ ON rooms.id = student.room
 GROUP BY rooms.id
 HAVING SUM(CASE WHEN sex = 'F' THEN 1 ELSE 0 END) >= 1 
 AND SUM(CASE WHEN sex = 'M' THEN 1 ELSE 0 END) >= 1;
-
-
-
--- Индексы
-CREATE INDEX idx_rooms_id ON rooms (id);
-CREATE INDEX idx_birthday ON students (birthday);
-CREATE INDEX idx_sex ON students (sex);
