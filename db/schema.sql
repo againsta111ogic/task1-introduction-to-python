@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS rooms(
 );
 
 CREATE TABLE IF NOT EXISTS students(
-    birthday DATETIME(6) NOT NULL,
+    birthday DATETIME(6),
     id INT,
     name VARCHAR(255) NOT NULL,
     room INT,
